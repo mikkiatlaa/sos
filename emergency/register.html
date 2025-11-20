@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/burger.css" />
+    <link rel="stylesheet" href="css/cards.css" />
+    <link rel="stylesheet" href="css/forms.css" />
+    <link rel="icon" type="image/png" href="img/fav.png" />
+    <title>Emergency Site</title>
+  </head>
+  <body id="register">
+    <header>
+      <nav>
+        <div id="logotype-wrapper" class="logo">
+          <a href="index.html"> LOGO-TYPE </a>
+        </div>
+        <ul class="menu">
+          <button id="toggle">Dark/Light</button>
+          <li><a class="menuItem" href="instruction.html">Nærkontakt </a></li>
+          <li><a class="menuItem" href="register.html">Indberet</a></li>
+        </ul>
+        <button class="burger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <h1>SØG OM ADOPTERING</h1>
+      <section id="form-section" class="form-section">
+        <article id="form-info">
+          <h2>Blanket</h2>
+          <p>Udfuld for at komme af med barnet</p>
+          <form id="form">
+            <h3>Child</h3>
+            <div class="child-form">
+              <div class="form-group">
+                <label for="child_name">Full Name</label>
+                <input name="child_name" id="child_name" type="text" required />
+                <p class="error-message">Please enter value</p>
+              </div>
+              <div class="form-group">
+                <label for="child_age">Age</label>
+                <input name="child_age" id="child_age" type="text" required />
+                <p class="error-message">Please enter value</p>
+              </div>
+              <div class="form-group">
+                <label for="days_cried">Days in a row the child has cried</label>
+                <input name="days_cried" id="days_cried" type="text" required />
+                <p class="error-message">Please enter value</p>
+              </div>
+              <div class="form-group">
+                <label for="child_files">Files</label>
+                <input name="child_files" id="child_files" type="file" required />
+                <p class="error-message">Please enter value</p>
+              </div>
+            </div>
+            <div>
+              <h3>Parent/Guardian</h3>
+              <div class="parent-form">
+                <div class="form-group">
+                  <label for="parent_name">Full Name</label>
+                  <input type="text" name="parent_name" id="parent_name" required />
+                  <p class="error-message">Please enter value</p>
+                </div>
+                <div class="form-group">
+                  <label for="parent_age">Age</label>
+                  <input type="text" name="parent_age" id="parent_age" required />
+                  <p class="error-message">Please enter value</p>
+                </div>
+                <div class="form-group">
+                  <label for="without_sleep">Days in a row without sleep</label>
+                  <input type="text" name="days_without_sleep" id="without_sleep" required />
+                  <p class="error-message">Please enter value</p>
+                </div>
+                <div class="form-group">
+                  <label for="parent_files">Files</label>
+                  <input name="parent_files" id="parent_files" type="file" required />
+                  <p class="error-message">Please enter value</p>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Adresse</label>
+                  <input type="email" name="email" id="email" required />
+                  <p class="error-message">Please enter value</p>
+                </div>
+                <div class="form-group">
+                  <label for="mobile">Mobile</label>
+                  <input name="mobile" id="mobile" type="text" required minlength="8" />
+                  <p class="error-message">Please enter value</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="radio">
+              <h3 class="title">Hvorfor vil du af med barnet?</h3>
+              <div class="radio-group">
+                <div class="form-group">
+                  <input type="radio" name="hvorfor" value="Det græder for meget" />
+                  Det græder for meget
+                </div>
+                <div class="form-group">
+                  <input type="radio" name="hvorfor" value="Jeg er for træt til at tage med af de" />
+                  Jeg er for træt til at tage med af de
+                </div>
+                <div class="form-group">
+                  <input type="radio" name="hvorfor" value="Dårlig investering" />
+                  Dårlig investering
+                </div>
+              </div>
+            </div>
+            <div class="submit-form">
+              <div></div>
+              <div>
+                <button>Submit Child</button>
+              </div>
+            </div>
+          </form>
+        </article>
+        <form id="webform"></form>
+      </section>
+      <section id="form-summary">
+        <h2>Summary</h2>
+        <article id="summary-section" name="summary-section">
+          <p class="placeholder">Opsummering</p>
+          <div>
+            <p>Cild name: <span id="child_name_output"></span></p>
+            <p>Child age: <span id="child_age_output"></span></p>
+            <p>Days cried: <span id="days_cried_output"></span></p>
+            <p>Child documents: <span id="child_files_output"></span></p>
+            <p>Parent name: <span id="parent_name_output"></span></p>
+            <p>Parent age: <span id="parent_age_output"></span></p>
+            <p>Days without sleep: <span id="without_sleep_output"></span></p>
+            <p>Parent documents: <span id="parent_files_output"></span></p>
+            <p>Email: <span id="email_output"></span></p>
+            <p>Mobile: <span id="mobile_output"></span></p>
+            <p>Hvorfor: <span id="hvorfor_output"></span></p>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <nav class="some">
+        <ul>
+          <li><a href="">link</a></li>
+          <li><a href="">link</a></li>
+          <li><a href="">link</a></li>
+          <li><a href="">link</a></li>
+        </ul>
+      </nav>
+      <nav class="another">
+        <ul>
+          <li><a href="">link</a></li>
+          <li><a href="">link</a></li>
+          <li><a href="">link</a></li>
+          <li><a href="">link</a></li>
+        </ul>
+      </nav>
+      <nav class="yetanother">
+        <ul>
+          <li><a href="">link</a></li>
+          <li><a href="">link</a></li>
+          <li><a href="">link</a></li>
+          <li><a href="">link</a></li>
+        </ul>
+      </nav>
+    </footer>
+    <script src="js/burger.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/register.js"></script>
+  </body>
+</html>
